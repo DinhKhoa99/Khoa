@@ -15,13 +15,11 @@ namespace BigSchool.Models
         [Required]
         [StringLength(255)]
         public string Place { get; set; }
-        public DateTime Datetime { get; set; }
+        public DateTime DateTime { get; set; }
 
         public Category Category { get; set; }
        
         public byte CategoryId { get; set; }
-        public string LeturerId { get; internal set; }
-        public DateTime DateTime { get; internal set; }
     }
    
 }

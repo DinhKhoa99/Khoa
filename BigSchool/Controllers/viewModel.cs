@@ -1,6 +1,6 @@
 ﻿namespace BigSchool.Controllers
 {
-    internal class viewModel
+    internal class upcommingCourse
     {
     }
 }

@@ -6,6 +6,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @using (Html.BeginForm("Create", "Courses")) { 
+    
 <h2>Create</h2>
 <form>
     <div class = "form-group">
@@ -26,16 +27,20 @@
         @Html.ValidationMessageFor(m => m.Time)
     </div>
 
-
+    
     <div class="form-group">
         @Html.LabelFor(m => m.Category)
         @Html.DropDownListFor(m => m.Category,
             new SelectList(Model.Categories, "Id","Name"),"",new {@class = "form-control"})
         @Html.ValidationMessageFor(m => m.Category)
     </div><button type="submit" value="Save" class="btn-primary">Save</button>
+
     <div class="form-group"></div>
     <div class="form-group"></div>
     <div class="form-group"></div>
 </form>
 }
 
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")}

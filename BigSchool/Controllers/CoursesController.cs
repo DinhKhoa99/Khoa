@@ -28,6 +28,7 @@ namespace BigSchool.Controllers
         }
         [Authorize]
         [HttpPost]
+        
         public ActionResult Create(CourseViewModel viewModel)
         {
             if(!ModelState.IsValid)
@@ -39,7 +40,7 @@ namespace BigSchool.Controllers
            
             var course = new Course
             {
-                LeturerId = User.Identity.GetUserId(),
+                LecturerId = User.Identity.GetUserId(),
                 DateTime = viewModel.GetDateTime(),
                 CategoryId = viewModel.Category,
                 Place = viewModel.Place
