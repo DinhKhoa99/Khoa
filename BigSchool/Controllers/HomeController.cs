@@ -12,13 +12,14 @@ namespace BigSchool.Controllers
     public class HomeController : Controller
     {
         private ApplicationDbContext _dbContext;
+
         public HomeController()
         {
             _dbContext = new ApplicationDbContext();
         }
         public ActionResult Index()
         {
-            var upcommingCourse = _dbContext.Courses
+            var upcommingCourses = _dbContext.Courses
                .Include(c => c.Lecturer)
                .Include(c => c.Category)
                .Where(c => c.DateTime > DateTime.Now)
@@ -28,7 +29,7 @@ namespace BigSchool.Controllers
             //    UpcommingCourses = upcommingCourse,
             //    ShowAction = User.Identity.IsAuthenticated
             //};
-            return View(upcommingCourse);
+            return View(upcommingCourses);
         }
 
         public ActionResult About()

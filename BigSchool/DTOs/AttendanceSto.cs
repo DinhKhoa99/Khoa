@@ -8,4 +8,5 @@ namespace BigSchool.DTOs
     public class AttendanceSto
     {
     }
+    
 }

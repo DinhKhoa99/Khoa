@@ -1,4 +1,4 @@
-﻿@model IEnumerable < BigSchool.Models.Course>
+﻿@model IEnumerable<BigSchool.Models.Course>
 @{
     ViewBag.Title = "Home Page";
 }
@@ -11,31 +11,32 @@
 
 <div class="row">
     <ul class="course">
-        @foreach (var course in Model.UpcommingCourses)
+        @foreach (var course in Model)
             {
             <li>
-
                 <div class="date">
                     <div class="month">@course.DateTime.ToString("MM")</div>
                     <div class="day">@course.DateTime.ToString("dd")</div>
                 </div>
-                <div class="detail">
+                <div class="details">
                     <span class="lecturer">
-                        @course.Id --- @course.Lecturer.Name
-                        @if (Model.ShowAction)
-                        {
-                            <button data-user-id="@course.LecturerID" class="btn btn-default btn-sm js-toggle-follow">Follow</button>
-                        }
+                        @*@course.Id ---*@ @course.Lecturer.Name
+                        @*@if (Model.ShowAction)
+                            {
+                                <button data-user-id="@course.LecturerID" class="btn btn-default btn-sm js-toggle-follow">Follow</button>
+                            }*@
 
                     </span>
+                    
                     <span class="category">@course.Category.Name</span>
                     <span>
-                        @if (Model.ShowAction)
-                        {
-                            <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
-                        }
+                        @*@if (Model.ShowAction)
+                            {
+                                <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                            }*@
 
                     </span>
+                    <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
                 </div>
             </li>
         }
@@ -58,18 +59,19 @@
                     alert("Something fail");
                 });
             });
-            $(".js-toggle-follow").click(function (e) {
-                var button = $(e.target);
-                $.post("/api/followings", { FolloweeId: button.attr("data-user-id") }).done(function () {
-                    button
-                    .text("Following")
-                })
-                .fail(function () {
-                    alert("Something fail");
-                });
-            });
         });
+        //    $(".js-toggle-follow").click(function (e) {
+        //        var button = $(e.target);
+        //        $.post("/api/followings", { FolloweeId: button.attr("data-user-id") }).done(function () {
+        //            button
+        //            .text("Following")
+        //        })
+        //        .fail(function () {
+        //            alert("Something fail");
+        //        });
+        //    });
+        //});
 
-    </script>
+ </script>
 
 }
