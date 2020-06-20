@@ -16,7 +16,7 @@ namespace BigSchool.Models
         public ICollection<Following> Followings { get; set; }
 
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("DefaultConnection", throwIfV1Schema: false) 
         {
         }
 
