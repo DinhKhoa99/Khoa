@@ -5,14 +5,14 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace BigSchool.Models
+namespace BigSchool.Models  
 {
     public class ApplicationDbContext: IdentityDbContext<ApplicationUser>
     {
         public DbSet<Course> Courses{ get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Attendance> Attendances { get; set; }
-        public object Attendences { get; internal set; }
+        public object Attendences { get; internal set; }    
         public ICollection<Following> Followings { get; set; }
 
         public ApplicationDbContext()
