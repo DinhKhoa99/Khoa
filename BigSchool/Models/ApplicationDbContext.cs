@@ -31,7 +31,7 @@ namespace BigSchool.Models
                 .WithMany()
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<ApplicationUser>()
+            modelBuilder.Entity<ApplicationUser>() 
                 .HasMany(u => u.Followers)
                 .WithRequired(f => f.Followee)
                 .WillCascadeOnDelete(false);
