@@ -217,24 +217,29 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\viewModel.cs" />
     <Compile Include="DTOs\AttendanceSto.cs" />
+    <Compile Include="DTOs\FollowingsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202006160229529_init.cs" />
-    <Compile Include="Migrations\202006160229529_init.Designer.cs">
-      <DependentUpon>202006160229529_init.cs</DependentUpon>
+    <Compile Include="Migrations\202006230155040_Khoi tao.cs" />
+    <Compile Include="Migrations\202006230155040_Khoi tao.Designer.cs">
+      <DependentUpon>202006230155040_Khoi tao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202006160231161_PopulateCategoryTable.cs" />
-    <Compile Include="Migrations\202006160231161_PopulateCategoryTable.Designer.cs">
-      <DependentUpon>202006160231161_PopulateCategoryTable.cs</DependentUpon>
+    <Compile Include="Migrations\202006230156311_PopulateCategoryTable.cs" />
+    <Compile Include="Migrations\202006230156311_PopulateCategoryTable.Designer.cs">
+      <DependentUpon>202006230156311_PopulateCategoryTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202006160308059_AddNameColumnToApplicationUser.cs" />
-    <Compile Include="Migrations\202006160308059_AddNameColumnToApplicationUser.Designer.cs">
-      <DependentUpon>202006160308059_AddNameColumnToApplicationUser.cs</DependentUpon>
+    <Compile Include="Migrations\202006230159339_AddNameColumnToApplicationUser.cs" />
+    <Compile Include="Migrations\202006230159339_AddNameColumnToApplicationUser.Designer.cs">
+      <DependentUpon>202006230159339_AddNameColumnToApplicationUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202006160402200_AddAttendance.cs" />
-    <Compile Include="Migrations\202006160402200_AddAttendance.Designer.cs">
-      <DependentUpon>202006160402200_AddAttendance.cs</DependentUpon>
+    <Compile Include="Migrations\202006230200119_AddAttendance.cs" />
+    <Compile Include="Migrations\202006230200119_AddAttendance.Designer.cs">
+      <DependentUpon>202006230200119_AddAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006230200412_AddFollowingsTable.cs" />
+    <Compile Include="Migrations\202006230200412_AddFollowingsTable.Designer.cs">
+      <DependentUpon>202006230200412_AddFollowingsTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -326,17 +331,20 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006160229529_init.resx">
-      <DependentUpon>202006160229529_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006230155040_Khoi tao.resx">
+      <DependentUpon>202006230155040_Khoi tao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006160231161_PopulateCategoryTable.resx">
-      <DependentUpon>202006160231161_PopulateCategoryTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006230156311_PopulateCategoryTable.resx">
+      <DependentUpon>202006230156311_PopulateCategoryTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006160308059_AddNameColumnToApplicationUser.resx">
-      <DependentUpon>202006160308059_AddNameColumnToApplicationUser.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006230159339_AddNameColumnToApplicationUser.resx">
+      <DependentUpon>202006230159339_AddNameColumnToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006160402200_AddAttendance.resx">
-      <DependentUpon>202006160402200_AddAttendance.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006230200119_AddAttendance.resx">
+      <DependentUpon>202006230200119_AddAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006230200412_AddFollowingsTable.resx">
+      <DependentUpon>202006230200412_AddFollowingsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
